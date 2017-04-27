@@ -1,0 +1,29 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "MongoDB and users",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require test/setup.js",
+    "lint:js": "eslint src",
+    "lint": "npm run lint:js"
+  },
+  "author": "Marcos del Cristo",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "mocha": "^3.3.0",
+    "mongoose": "^4.9.6",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": "lint:staged",
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
