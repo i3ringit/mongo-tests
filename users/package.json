@@ -4,7 +4,7 @@
   "description": "MongoDB and users",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require test/setup.js",
+    "test": "nodemon --exec mocha -R min",
     "lint:js": "eslint src",
     "lint": "npm run lint:js"
   },
@@ -12,8 +12,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "mocha": "^3.3.0",
-    "mongoose": "^4.9.6",
-    "nodemon": "^1.11.0"
+    "mongoose": "^4.9.6"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
